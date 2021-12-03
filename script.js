@@ -25,7 +25,7 @@ const loadImagesOnPage = quantity => {
 
 // Loading images on page as a masonry display
 
-loadImagesOnPage(1);
+loadImagesOnPage(12);
 
 const macy = new Macy({
   container: ".masonry",
