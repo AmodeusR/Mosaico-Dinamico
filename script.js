@@ -2,8 +2,11 @@ const masonry = document.querySelector(".masonry");
 
 window.addEventListener("load", () => {
   const macyChildren = Array.from(masonry.children);
-  macyChildren.forEach(child => {
-    child.classList.add("show");
+  macyChildren.forEach((child, i) => {
+    setTimeout(() => {
+      child.classList.add("show");
+
+    }, 300 * i);
   });
 })
 // Utility functions
