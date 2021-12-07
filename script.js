@@ -1,5 +1,11 @@
 const masonry = document.querySelector(".masonry");
 
+window.addEventListener("load", () => {
+  const macyChildren = Array.from(masonry.children);
+  macyChildren.forEach(child => {
+    child.classList.add("show");
+  });
+})
 // Utility functions
   
 const createImage = source => {
@@ -40,5 +46,6 @@ const macy = new Macy({
     800: 3,
     1200: 4,
     1600: 5
-  }
+  },
+  waitForImages: true,
 });
