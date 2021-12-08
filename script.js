@@ -15,7 +15,7 @@ const createImage = source => {
   const imgEl = document.createElement("img");
   imgEl.src = source;
   imgEl.classList.add("gallery-img");
-  console.log(source)
+  
   return imgEl;
 }
 
