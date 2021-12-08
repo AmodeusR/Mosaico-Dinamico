@@ -1,5 +1,5 @@
 body {
-  font-family: "Karla", sans-serif;
+  font-family: "Readex Pro", sans-serif;
   margin: 0;
   background: #e1e6eb;
 }
@@ -20,22 +20,42 @@ img {
   transition:
     opacity ease-in 1.5s,
     width 700ms ease;
-  /* animation: image-load 2s ease 2s forwards; */
 }
 
 .gallery-img.show {
   opacity: 1;
 }
 
-/* @keyframes image-load {
-  from {
-    opacity: 0;
-  }
+.title {
+  margin: 2rem auto;
+  width: 60%;
+  font-size: 4rem;
+}
 
-  to {
-    opacity: 1;
-  }
-} */
+.description {
+  margin: 0 auto;
+  width: 40%;
+  font-weight: 300;
+}
+
+.description.new-paragraph {
+  margin-top: 1rem;
+}
+
+.intro {
+  margin-bottom: 2rem;
+}
+
+.rasurar {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.55);
+  font-size: .8rem;
+}
+
+.emoji-pensando {
+  display: inline;
+  width: 1.5rem;
+}
 
 
 @media (min-width: 50em ) {
