@@ -25,16 +25,18 @@ const pushToPage = element => {
 
 const loadImagesOnPage = quantity => {
   quantity = quantity ?? 4;
+
   
   for (let i = 0; i < quantity; i++) {
-    const image = createImage(`https://source.unsplash.com/random?${i}`);
+    const [x, y] = generateRandomRange(400, 1200);
+    const image = createImage(`https://picsum.photos/seed/${i + 1 * Math.random()}/${x}/${y}`);
     pushToPage(image); 
   }
 }
 
 // Loading images on page as a masonry display
 
-loadImagesOnPage(12);
+loadImagesOnPage(16);
 
 const macy = new Macy({
   container: ".masonry",
@@ -52,3 +54,15 @@ const macy = new Macy({
   },
   waitForImages: true,
 });
+
+
+function generateRandomRange(minimum, maximum) {
+  if (minimum > maximum) {
+    minimum, maximum = maximum, minimum;
+  }
+
+  const range = Math.round(Math.random() * (maximum - minimum) + minimum);
+  const range2 = Math.round(Math.random() * (maximum - minimum) + minimum);
+
+  return [range, range2];
+}
